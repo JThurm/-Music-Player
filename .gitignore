@@ -1,0 +1,13 @@
+build/
+.vscode/
+*.user
+*.user.*
+*.suo
+
+assets/music/*
+!assets/music/.gitkeep
+
+*.mp3
+*.wav
+*.flac
+*.m4a
