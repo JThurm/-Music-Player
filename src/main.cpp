@@ -100,28 +100,28 @@ int main()
 
         ImGui::NewFrame();
 
-
         // ----------------------------------------------------
-        // Temporary UI
+        // Sidebar
         // ----------------------------------------------------
 
-        ImGui::Begin("Pulse");
+        // setting the size of the sidebar
+        ImGui::SetNextWindowPos(ImVec2(0,0));
+        ImGui::SetNextWindowSize(ImVec2( 250, ImGui::GetIO().DisplaySize.y));
+        
 
-        ImGui::Text(
-            "Welcome to the Pulse Music Player!"
-        );
+        ImGui::Begin("Sidebar");
+        ImGui::Text("Pulse");
 
         ImGui::Separator();
+        ImGui::Button("Home");
+        ImGui::Button("Library");
 
-        if (ImGui::Button("Click Me"))
-        {
-            std::cout << "Button clicked!" << std::endl;
-        }
+        ImGui::Spacing();
+        
+        ImGui::Text("Playlists");
 
+        ImGui::Button("+ New Playlists");
         ImGui::End();
-
-        // hello
-
 
         // ----------------------------------------------------
         // Render
